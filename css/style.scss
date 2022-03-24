@@ -10,8 +10,8 @@ $ff-secondary: "Nunito", sans-serif;
 $fw-reg: 300;
 $fw-bold: 900;
 
-$clr-bg: #ffff;
-$clr-text: #303030;
+$clr-light: #ffff;
+$clr-dark: #303030;
 $clr-accent: #93c0b9;
 
 $fs-h1: 3rem;
@@ -19,27 +19,55 @@ $fs-h2: 2.25rem;
 $fs-h3: 1.25rem;
 $fs-body: 1rem;
 
+$bs: 0.25rem 0.25rem 0.75rem rgba(0, 0, 0, 0.25rem),
+  0.125rem 0.12rem 0.25rem rgba(0, 0, 0, 0.15rem);
+
 $medium: 800px;
 
 // general styles
 
 body {
-  background-color: $clr-bg;
-  color: $clr-text;
+  background-color: $clr-light;
+  color: $clr-dark;
   margin: 0;
   font-family: $ff-primary;
   font-size: $fs-body;
   line-height: 1.6;
 
+  section {
+    padding: 5rem 2rem;
+  }
   img {
     display: block;
     max-width: 100%;
   }
 
+  strong {
+    display: block;
+    font-weight: $fw-bold;
+  }
+
+  .btn{
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    background: $clr-accent;
+    color: $clr-dark;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: $fw-bold;
+    transition: transform 200ms ease-in-out;
+  }
+
+  .btn:hover{
+    transform: scale(1.1);
+  }
   h1,
   h2,
   h3 {
-    line-height: 1.1;
+    line-height: 1;
     margin: 0;
   }
   h1 {
@@ -53,10 +81,107 @@ body {
   h3 {
     font-size: $fs-h3;
   }
+
+  .sectionTitle {
+    margin-bottom: 0.25rem;
+  }
+
+  .sectionTitleIntro {
+    font-weight: $fw-reg;
+  
+  }
+  .sectionSub {
+    margin: 0;
+    font-size: $fs-h3;
+    display: inline-block;
+  }
+
+  .sectionSubIntro,
+  .sectionSubTitleAbout {
+    background-color: $clr-accent;
+    padding: 0.25rem 1rem;
+    font-family: $ff-secondary;
+    margin-bottom: 1rem;
+  }
+
+  // header
+
+  nav {
+    display: none;
+  }
+
+  //intro section
+
+  .intro {
+    position: relative;
+
+    img {
+      box-shadow: $bs;
+    }
+  }
+
+  // my service section
+
+  .myServices {
+    background-color: $clr-dark;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.5), rgba(4, 9, 30, 0.5)),
+      url(/img/marvin-meyer-SYTO3xs06fU-unsplash.jpg);
+    background-size: cover;
+    color: $clr-light;
+    text-align: center;
+
+    .sectionTitleServices {
+      color: $clr-accent;
+      position: relative;
+    }
+
+    .sectionTitleServices::after {
+      content: "";
+      display: block;
+      width: 5rem;
+      height: 1px;
+      margin: 0.5rem auto 1rem;
+      background: $clr-light;
+      opacity: 0.25rem;
+    }
+    .service {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+  }
 }
 
+@media (min-width: 600px) {
+  .intro {
+    display: grid;
+    width: min-content;
+    margin: 0 auto;
+    grid-column-gap: 1rem;
+    grid-template-areas:
+      "img title"
+      "img subtitle";
+    grid-template-columns: min-content max-content;
+
+    img {
+      grid-area: img;
+      min-width: 250px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .sectionSubIntro {
+      align-self: start;
+      grid-column: -1 /1;
+      grid-row: 2;
+      text-align: right;
+      position: relative;
+      left: -1.5rem;
+      width: calc(100% + 1.5rem);
+    }
+  }
+}
 @media (min-width: $medium) {
-  $fs-h1: 4rem;
+  $fs-h1: 4.5rem;
   $fs-h2-media: 3.75rem;
   $fs-h3-media: 1.5rem;
   $fs-body-media: 1.2rem;
@@ -73,6 +198,15 @@ body {
 
     h3 {
       font-size: $fs-h3;
+    }
+
+    .services {
+      display: flex;
+      max-width: 1000px;
+      margin: 0 auto;
+      .service + .service {
+        margin-left: 2rem;
+      }
     }
   }
 }
