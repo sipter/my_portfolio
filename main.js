@@ -9,3 +9,10 @@ navLinks.forEach((link) => {
     document.body.classList.remove("nav-open");
   });
 });
+
+
+const checkbox = document.getElementById("checkbox");
+
+checkbox.addEventListener("change", () => {
+  document.body.classList.toggle("dark")
+})

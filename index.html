@@ -22,7 +22,15 @@
     <!---   https://www.youtube.com/watch?v=_xkSvufmjEs  video-->
     <header>
         <div class="logo">
-            <img src="#" alt="my_image">
+            <!--<img src="#" alt="my_image"> -->
+            <div class="darkLightMode">
+                <input type="checkbox" class="checkbox" id="checkbox">
+                <label for="checkbox" class="label">
+                    <i class="fa-solid fa-moon"></i>
+                    <i class="fa-solid fa-sun"></i>
+                    <div class="ball"></div>
+                </label>
+            </div>
         </div>
         <button class="nav-toggle" label="toggle navigation">
             <span class="hamburger"></span>
@@ -30,21 +38,23 @@
         <nav>
             <ul class="nav__list">
                 <li class="nav__item"> <a href="#home" class="nav__link">Home</a></li>
-                <li class="nav__item"> <a href="#services" class="nav__link">My Services</a></li>
+                <!-- <li class="nav__item"> <a href="#services" class="nav__link">My Services</a></li> -->
                 <li class="nav__item"> <a href="#about" class="nav__link">About me</a></li>
                 <li class="nav__item"> <a href="#work" class="nav__link">My Work</a></li>
             </ul>
         </nav>
+
     </header>
     <!--Introduction-->
     <section class="intro" id="home">
         <h1 class="section__title section__title--intro">Hi, I am <strong> Vaia Zymara</strong></h1>
-        <p class="section__subtitle section__subtitle--intro">Junior front-/back-end <br> web developer</p>
+        <p class="section__subtitle section__subtitle--intro">Junior Front-end <br> web developer</p>
         <img src="img/IMG_20210619_151618_735.jpg" alt="my personal img" class="intro__img">
     </section>
 
+    <hr>
     <!--Me services-->
-    <section class="my-services" id="services">
+    <!-- <section class="my-services" id="services">
         <h2 class="section__title section__title--services">What I do</h2>
         <div class="services">
             <div class="service">
@@ -74,20 +84,25 @@
         </div>
 
         <a href="#work" class="btn">My Work</a>
-    </section>
+    </section> -->
 
     <!--About me-->
 
     <section class="about-me" id="about">
         <h2 class="section__title section__title--about">Who I am</h2>
-        <p class="section__subtitle section__subtitle--about">Junior Fron-/Back-end developer</p>
+        <p class="section__subtitle section__subtitle--about">Junior Front-end developer based Berlin</p>
         <div class="about-me__body">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus magni facere eveniet placeat
-                corrupti, quam dolores aliquam voluptatem. Suscipit, autem impedit ratione labore consequuntur dolor!
-                Architecto similique incidunt praesentium fugit.
+            <p>I’m an enthusiastic and motivated Junior Front-/Back-end
+                developer. Since last year I've decided to change my career
+                and become a software developer which I find more fulfilling.
+                I attended HTML/ CSS/ JavaScript/ React course at ReDi
+                School and currently I'm a student at DCI Digital Career
+                Institute (one-year course) as Full Stack Web Development. I
+                am very excited by the thought that programming can solve
+                many of the everyday problems one faces, so I am
+                committed to learn, work and grow as a software engineer.
             </p>
-            <p>Doloremque nostrum mollitia quae error omnis commodi nemo facere sed sunt? Exercitationem eum fuga et!
-                Eum ab illum recusandae dolores amet fugit mollitia impedit vel eos saepe! Hic, reprehenderit neque.
+            <p>
             </p>
         </div>
 
@@ -125,23 +140,19 @@
                 <p>html css</p>
              -->
 
-            <a href="#" class="portfolio-item">
-                <img src="img/cooming-soon.png" alt="#" class="portfolio__img">
-            </a>
-            <!-- <p>Project 5</p>
-                <p>html css</p> -->
-
-
 
             <!-- EXPERIMENT WITH ANIMATION  -->
-            <div class="container2">               
-                    <img src="img/cooming-soon.png" alt="#" class="portfolio__img portfolio-item">
+
+            <div class="container2">
+                <img src="img/plantShop.png" alt="#" class="portfolio__img portfolio-item">
                 <div class="img_description2">
-                    <p>Project 6 <br>
-                        html css
+                    <p>My Plant Shop<br>
+                       HTML/CSS
                     </p>
-                    <button class="project-button"> <a href="https://www.google.de/" target="_blank">Web Page</a> </button>
-                    <button class="project-button"> <a href="https://www.google.de/" target="_blank">GitHub</a> </button>
+                    <button class="project-button"> <a href="https://sipter.github.io/myPlantShop/" target="_blank">Web
+                            Page</a> </button>
+                    <button class="project-button"> <a href="https://github.com/sipter/myPlantShop"
+                            target="_blank">GitHub</a> </button>
                 </div>
 
             </div>
@@ -170,12 +181,12 @@
         <a href="#" class="footer__link">example@mail.com</a>
         <ul class="social-list">
             <li class="social-list__item">
-                <a href="#" class="social-list__link">
+                <a href="https://github.com/sipter" class="social-list__link" target="_blank">
                     <i class="fa-brands fa-github"></i>
                 </a>
             </li>
             <li class="social-list__item">
-                <a href="#" class="social-list__link">
+                <a href="https://www.linkedin.com/in/vaia-zymara" class="social-list__link" target="_blank">
                     <i class="fa-brands fa-linkedin-in"></i>
                 </a>
             </li>
