@@ -1,0 +1,37 @@
+askisi 1 apo hackrank!!
+
+ let parenthesis = 0;
+    let count = 0;
+    for(let i = 0; i < s.length; i++) {
+        if(s[i] === '('){
+            parenthesis = parenthesis + 1;
+        }  else if(s[i] === ')') {
+            if(parenthesis === 0) {
+                count = count + 1
+            } else{
+               parenthesis = parenthesis - 1; 
+            }
+            
+        }       
+    }    
+    
+    return count + parenthesis;
+    
+    
+    askisi 2!!!
+        // Write your code here
+    let finalArr = [];
+    let increment = [...unsorted];// pros ta panw
+    let decrement = [...unsorted];// pros ta katw
+    increment.sort((a,b)=>a-b)// pros ta panw
+    decrement.sort((a,b)=>a-b) // kanei to ordering swsta ena string exei px"25" arithmo => pros ta katw
+    decrement.reverse()//antistrefw ta pros ta katw
+     for(let i = 0; i < unsorted.length; i++){
+        finalArr.push(decrement[i]) 
+        finalArr.push(increment[i])  
+    }
+    
+    //  console.log(unsorted)
+    //  console.log(increment)
+    //  console.log(decrement)
+    return finalArr.slice(0, unsorted.length)// gia na diagrapsw ta dipla..giati to array exxei displasio length apo to unsorted

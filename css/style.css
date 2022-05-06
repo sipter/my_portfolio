@@ -437,9 +437,10 @@ nav .nav__list .nav__link:hover {
 }
 
 .about-me__img {
-  -webkit-box-shadow: 0.25rem 0.25rem 0.75rem rgba(0, 0, 0, 0.25), 0.125rem 0.12rem 0.25rem rgba(0, 0, 0, 0.15);
-          box-shadow: 0.25rem 0.25rem 0.75rem rgba(0, 0, 0, 0.25), 0.125rem 0.12rem 0.25rem rgba(0, 0, 0, 0.15);
   height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background: transparent;
 }
 
 @media (min-width: 600px) {
@@ -473,6 +474,9 @@ nav .nav__list .nav__link:hover {
     grid-area: img;
     position: relative;
     z-index: 2;
+    -o-object-fit: cover;
+       object-fit: cover;
+    background: transparent;
   }
 }
 
@@ -504,6 +508,8 @@ nav .nav__list .nav__link:hover {
   transition: opacity 250ms linear, -webkit-transform 750ms cubic-bezier(0.5, 0, 0.5, 1);
   transition: transform 750ms cubic-bezier(0.5, 0, 0.5, 1), opacity 250ms linear;
   transition: transform 750ms cubic-bezier(0.5, 0, 0.5, 1), opacity 250ms linear, -webkit-transform 750ms cubic-bezier(0.5, 0, 0.5, 1);
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .portfolio-item:focus {
